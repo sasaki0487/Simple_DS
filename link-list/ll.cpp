@@ -19,7 +19,22 @@ void Node::add(int n){
 }
 
 void Node::remove(int n){
-
+    Node* dummy = this;
+    bool f = false;
+    while(dummy -> next != NULL){
+        if(dummy -> next -> val == n){
+            f = true;
+            break;
+        }
+        dummy = dummy -> next;
+    }
+    if(f){
+         dummy -> next = dummy -> next -> next;
+    }
+    else{
+        cout << "Not Found!!\n";
+    }
+    printNode();
 }
 
 void Node::printNode(){

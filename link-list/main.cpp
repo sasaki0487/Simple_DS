@@ -16,7 +16,9 @@ int main(){
             N->add(n);
         }
         else if(n == 2){
-
+            cout << "Enter the num to delete from the link list\n> ";
+            cin >> n;
+            N->remove(n);
         }
         else if(n == 3){
             break;
