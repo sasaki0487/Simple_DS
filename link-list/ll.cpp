@@ -38,7 +38,7 @@ void Node::remove(int n){
 }
 
 void Node::printNode(){
-    Node* dummy = this;
+    Node* dummy = this->next;
     while(1){
         cout << dummy -> val;
         dummy = dummy -> next;
@@ -51,6 +51,12 @@ void Node::printNode(){
         }
     }
 }
+
+void Node::setNext(Node* nxt){
+    this->next = nxt;
+}
+
+
 void printPrompt(){
     cout << "1: add node\t2: remove node\t3: exit\n";
 }

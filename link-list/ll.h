@@ -1,14 +1,15 @@
 #ifndef LL_H
 #define LL_H
-class Node {
-        int val;
-        Node* next;
-
+class Node {   
     public:
-        Node(int n);
-        void add(int n);
-        void remove(int n);
-        void printNode();
+    int val;
+    Node* next;
+//public:
+    Node(int);
+    void add(int);
+    void remove(int);
+    void printNode();
+    void setNext(Node *);
 };
 
 void printPrompt();
