@@ -18,7 +18,7 @@ void Node::add(int n){
     printNode();
 }
 
-void Node::remove(int n){
+void Node::removeVal(int n){
     Node* dummy = this;
     bool f = false;
     while(dummy -> next != NULL){
@@ -33,6 +33,21 @@ void Node::remove(int n){
     }
     else{
         cout << "Not Found!!\n";
+    }
+    printNode();
+}
+
+void Node::removePos(int n){
+    Node* dummy = this;
+    while(n > 1 && dummy -> next != NULL){
+        n--;
+        dummy = dummy -> next;
+    }
+    if(n == 1){
+        dummy -> next = dummy -> next -> next;
+    }
+    else{
+        cout << "Position not found!\n";
     }
     printNode();
 }
@@ -58,5 +73,5 @@ void Node::setNext(Node* nxt){
 
 
 void printPrompt(){
-    cout << "1: add node\t2: remove node\t3: exit\n";
+    cout << "1: add node\t2: remove node(value)\n3: remove node(position)\t4: exit\n";
 }

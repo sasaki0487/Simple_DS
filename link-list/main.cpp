@@ -11,16 +11,21 @@ int main(){
         cout << "> ";
         cin >> n;
         if(n == 1){
-            cout << "Enter the num to add to the link list\n> ";
+            cout << "Enter the num to append to the link list\n> ";
             cin >> n;
             N->add(n);
         }
         else if(n == 2){
             cout << "Enter the num to delete from the link list\n> ";
             cin >> n;
-            N->remove(n);
+            N->removeVal(n);
         }
         else if(n == 3){
+            cout << "Enter the pos to delete from the link list\n> ";
+            cin >> n;
+            N->removePos(n);
+        }
+        else if(n == 4){
             break;
         }
         else{

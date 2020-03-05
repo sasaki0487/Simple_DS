@@ -7,7 +7,8 @@ class Node {
 //public:
     Node(int);
     void add(int);
-    void remove(int);
+    void removeVal(int);
+    void removePos(int);
     void printNode();
     void setNext(Node *);
 };
