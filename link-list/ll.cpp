@@ -43,7 +43,7 @@ void Node::removePos(int n){
         n--;
         dummy = dummy -> next;
     }
-    if(n == 1){
+    if(n == 1 && dummy -> next != NULL){
         dummy -> next = dummy -> next -> next;
     }
     else{
