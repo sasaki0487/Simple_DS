@@ -31,10 +31,26 @@ int vec::push_back(int n){
 }
 
 void vec::printAll(){
-    Node* tmp = dummy->next;
+    Node* tmp = dummy;
     while(tmp->next != NULL){
-        cout << tmp->val << " ";
         tmp = tmp -> next;
+        cout << tmp->val << " ";
     }
     cout << endl;
+}
+
+int vec::pop_back(){
+    Node* tmp = dummy;
+    if(len == 0){
+        cout << "Nothing to pop." << endl;
+        return -1;
+    }
+    while(tmp -> next -> next != NULL){
+        tmp = tmp -> next;
+    }
+    Node* rm = tmp -> next;
+    tmp -> next = NULL;
+    int ret = rm -> val;
+    delete rm;
+    return ret;
 }

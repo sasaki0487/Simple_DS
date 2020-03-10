@@ -7,8 +7,12 @@ int main(){
     vec v;
     for(int i = 0 ; i < 10 ; i++){
         v.push_back(i * 10);
+        v.printAll();
+        if(i % 3 == 1){
+            v.pop_back();
+        }
+        v.printAll();
     }
-    v.printAll();
 
     return 0;
 }

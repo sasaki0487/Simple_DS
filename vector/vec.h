@@ -18,6 +18,7 @@ public:
     int push_back(int);
     int size();
     void printAll();
+    int pop_back();
 };
 
 #endif
