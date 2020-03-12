@@ -52,5 +52,31 @@ int vec::pop_back(){
     tmp -> next = NULL;
     int ret = rm -> val;
     delete rm;
+    len--;
     return ret;
+}
+
+int vec::get(int n){
+    if(n >= this-> size()){
+        cout << "OOB!\n";
+        return INT_MIN;
+    }
+    Node* tmp = dummy->next;
+    for(int i = 0 ; i < n ; i++){
+        tmp  = tmp -> next;
+    }
+    return tmp->val;
+}
+
+int vec::find(int n){
+    Node* tmp = dummy->next;
+    int i = 0;
+    while(tmp != NULL){
+        if(tmp -> val == n){
+            return i;
+        }
+        tmp = tmp -> next;
+        i++;
+    }
+    return -1;
 }

@@ -19,6 +19,8 @@ public:
     int size();
     void printAll();
     int pop_back();
+    int get(int);
+    int find(int);
 };
 
 #endif
