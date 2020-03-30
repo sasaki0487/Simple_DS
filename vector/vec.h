@@ -19,6 +19,7 @@ public:
     int push_back(int);
     int size();
     void printAll();
+    void reverse();
     int pop_back();
     int get(int);
     int find(int);

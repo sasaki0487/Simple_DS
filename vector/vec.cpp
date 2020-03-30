@@ -60,8 +60,8 @@ int vec::pop_back(){
 
 int vec::get(int n){
     if(n >= this-> size()){
-        cout << "OOB!\n";
-        return INT_MIN;
+        cout << "ERROR! Index out of bound. Index: " << n << endl;
+        return -1;
     }
     Node* tmp = head->next;
     for(int i = 0 ; i < n ; i++){
@@ -89,4 +89,19 @@ Node* vec::begin(){
 
 Node* vec::end(){
     return this->last;
+}
+
+void vec::reverse(){
+    Node* tmp = head -> next;
+    while(tmp != last){
+        Node* pre = tmp -> prev;
+        tmp -> prev = tmp -> next;
+        tmp = tmp -> next;
+        tmp -> prev -> next = pre;
+    }
+    tmp = head -> next;
+    head -> next = last -> prev;
+    head -> next -> prev = head;
+    last -> prev = tmp;
+    last -> prev -> next = last;
 }

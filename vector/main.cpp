@@ -14,9 +14,7 @@ int main(){
         }
         v.printAll();
     }
-    cout << v.get(0) << endl;
-    cout << v.get(3) << endl;
-    cout << v.find(0) << endl;
-    cout << v.find(30) << endl;
+    v.reverse();
+    v.printAll();
     return 0;
 }
