@@ -11,7 +11,12 @@ Node::Node(int n){
 
 vec::vec(){
     len = 0;
-    dummy = new Node(-1);
+    head = new Node(-1);
+    last = new Node(-1);
+    head -> next = last;
+    head -> prev = NULL;
+    last -> next = NULL;
+    last -> prev = head;
 }
 
 int vec::size(){
@@ -21,18 +26,17 @@ int vec::size(){
 int vec::push_back(int n){
     this -> len++;
     Node* ad = new Node(n);
-    Node* tmp = dummy;
-    while(tmp->next != NULL){
-        tmp = tmp->next;
-    }
+    Node* tmp = last -> prev;
     tmp -> next = ad;
     ad -> prev = tmp;
+    ad -> next = last;
+    last -> prev = ad;
     return 1;
 }
 
 void vec::printAll(){
-    Node* tmp = dummy;
-    while(tmp->next != NULL){
+    Node* tmp = head;
+    while(tmp->next != last){
         tmp = tmp -> next;
         cout << tmp->val << " ";
     }
@@ -40,16 +44,14 @@ void vec::printAll(){
 }
 
 int vec::pop_back(){
-    Node* tmp = dummy;
     if(len == 0){
         cout << "Nothing to pop." << endl;
         return -1;
     }
-    while(tmp -> next -> next != NULL){
-        tmp = tmp -> next;
-    }
+    Node* tmp = last -> prev -> prev;
     Node* rm = tmp -> next;
-    tmp -> next = NULL;
+    tmp -> next = last;
+    last -> prev = tmp;
     int ret = rm -> val;
     delete rm;
     len--;
@@ -61,7 +63,7 @@ int vec::get(int n){
         cout << "OOB!\n";
         return INT_MIN;
     }
-    Node* tmp = dummy->next;
+    Node* tmp = head->next;
     for(int i = 0 ; i < n ; i++){
         tmp  = tmp -> next;
     }
@@ -69,9 +71,9 @@ int vec::get(int n){
 }
 
 int vec::find(int n){
-    Node* tmp = dummy->next;
+    Node* tmp = head->next;
     int i = 0;
-    while(tmp != NULL){
+    while(tmp != last){
         if(tmp -> val == n){
             return i;
         }
@@ -79,4 +81,12 @@ int vec::find(int n){
         i++;
     }
     return -1;
+}
+
+Node* vec::begin(){
+    return this->head->next;
+}
+
+Node* vec::end(){
+    return this->last;
 }

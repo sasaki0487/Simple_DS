@@ -12,7 +12,8 @@ public:
 
 class vec {
     int len;
-    Node* dummy;
+    Node* head;
+    Node* last;
 public:
     vec();
     int push_back(int);
@@ -21,6 +22,8 @@ public:
     int pop_back();
     int get(int);
     int find(int);
+    Node* begin();
+    Node* end();
 };
 
 #endif
