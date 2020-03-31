@@ -19,6 +19,24 @@ vec::vec(){
     last -> prev = head;
 }
 
+void vec::swap(int n){
+    if(n >= this -> size() - 1 || n < 0){
+        return;
+    }
+    Node* tmp = head;
+    for(int i = 0 ; i <= n ; i++){
+        tmp = tmp -> next;
+    }
+    Node* pre = tmp -> prev;
+    Node* nxt = tmp -> next;
+    tmp -> next = tmp -> next -> next;
+    tmp -> next -> prev = tmp;
+    nxt -> prev = pre;
+    pre -> next = nxt;
+    nxt -> next = tmp;
+    tmp -> prev = nxt;
+}
+
 int vec::size(){
     return this->len;
 }
@@ -104,4 +122,20 @@ void vec::reverse(){
     head -> next -> prev = head;
     last -> prev = tmp;
     last -> prev -> next = last;
+}
+
+void vec::bsort(){
+    int l = this -> size();
+    for(int i = 0 ; i < l ; i++){
+        Node* tmp = head -> next;
+        for(int j = 0 ; j < l - i -1 ; j++){
+            if(tmp -> val > tmp -> next -> val){
+                this->swap(j);
+            }
+            else{
+                tmp = tmp->next;
+            }
+        }
+        this->printAll();
+    }
 }

@@ -16,5 +16,9 @@ int main(){
     }
     v.reverse();
     v.printAll();
+    v.swap(2);
+    v.printAll();
+    v.bsort();
+    v.printAll();
     return 0;
 }

@@ -17,6 +17,8 @@ class vec {
 public:
     vec();
     int push_back(int);
+    void swap(int);
+    void bsort();
     int size();
     void printAll();
     void reverse();
