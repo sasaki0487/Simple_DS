@@ -9,6 +9,10 @@ Node::Node(int n){
     next = NULL;
 }
 
+int vec::operator[](int i){
+    return this->get(i);
+}
+
 vec::vec(){
     len = 0;
     head = new Node(-1);
@@ -137,5 +141,11 @@ void vec::bsort(){
             }
         }
         this->printAll();
+    }
+}
+
+void vec::clear(){
+    while(this->size() != 0){
+        this->pop_back();
     }
 }

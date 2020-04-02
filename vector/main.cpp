@@ -20,5 +20,10 @@ int main(){
     v.printAll();
     v.bsort();
     v.printAll();
+    v.clear();
+    v.printAll();
+    v.push_back(123123);
+    v.printAll();
+    cout << v[0] << endl;
     return 0;
 }

@@ -15,11 +15,13 @@ class vec {
     Node* head;
     Node* last;
 public:
+    int operator[](int);
     vec();
     int push_back(int);
     void swap(int);
     void bsort();
     int size();
+    void clear();
     void printAll();
     void reverse();
     int pop_back();
