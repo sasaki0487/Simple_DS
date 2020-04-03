@@ -1,0 +1,8 @@
+/home/tsumugi/DS/trie/build/CMakeFiles/rebuild_cache.dir
+/home/tsumugi/DS/trie/build/CMakeFiles/edit_cache.dir
+/home/tsumugi/DS/trie/build/CMakeFiles/test.dir
+/home/tsumugi/DS/trie/build/CMakeFiles/Char_Trie.dir
+/home/tsumugi/DS/trie/build/test/CMakeFiles/rebuild_cache.dir
+/home/tsumugi/DS/trie/build/test/CMakeFiles/edit_cache.dir
+/home/tsumugi/DS/trie/build/test/CMakeFiles/test.dir
+/home/tsumugi/DS/trie/build/test/CMakeFiles/UnitTest.dir

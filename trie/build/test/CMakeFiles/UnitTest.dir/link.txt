@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/UnitTest.dir/unittest.cpp.o  -o UnitTest ../libChar_Trie.a /usr/local/lib64/libgtest.a /usr/local/lib64/libgtest_main.a /usr/local/lib64/libgtest.a -lpthread 

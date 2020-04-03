@@ -1,0 +1,2 @@
+/usr/bin/ar qc libChar_Trie.a  CMakeFiles/Char_Trie.dir/trie.cpp.o
+/usr/bin/ranlib libChar_Trie.a
