@@ -1,20 +1,20 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_391af/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_391af.dir/build.make CMakeFiles/cmTC_391af.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_d8602/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d8602.dir/build.make CMakeFiles/cmTC_d8602.dir/build
 gmake[1]: Entering directory `/home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_391af.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_391af.dir/CheckSymbolExists.c.o   -c /home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_391af
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_391af.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_391af.dir/CheckSymbolExists.c.o  -o cmTC_391af 
-CMakeFiles/cmTC_391af.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_d8602.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d8602.dir/CheckSymbolExists.c.o   -c /home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d8602
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8602.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_d8602.dir/CheckSymbolExists.c.o  -o cmTC_d8602 
+CMakeFiles/cmTC_d8602.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_391af] Error 1
+gmake[1]: *** [cmTC_d8602] Error 1
 gmake[1]: Leaving directory `/home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_391af/fast] Error 2
+gmake: *** [cmTC_d8602/fast] Error 2
 
 File /home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -34,18 +34,18 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_182cc/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_182cc.dir/build.make CMakeFiles/cmTC_182cc.dir/build
+Run Build Command:"/usr/bin/gmake" "cmTC_70619/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_70619.dir/build.make CMakeFiles/cmTC_70619.dir/build
 gmake[1]: Entering directory `/home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_182cc.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_182cc.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.12/Modules/CheckFunctionExists.c
-Linking C executable cmTC_182cc
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_182cc.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_182cc.dir/CheckFunctionExists.c.o  -o cmTC_182cc -lpthreads 
+Building C object CMakeFiles/cmTC_70619.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_70619.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_70619
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70619.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_70619.dir/CheckFunctionExists.c.o  -o cmTC_70619 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_182cc] Error 1
+gmake[1]: *** [cmTC_70619] Error 1
 gmake[1]: Leaving directory `/home/tsumugi/DS/trie/build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_182cc/fast] Error 2
+gmake: *** [cmTC_70619/fast] Error 2
 
 

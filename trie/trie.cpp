@@ -23,7 +23,6 @@ void Trie::insert(string s){
 }
 
 bool Trie::find(string s){
-    cout << "Find " << s << ": ";
     Trie* tmp = this;
     for(int i = 0 ; i < s.size() ; i++){
         if(tmp -> t.find(s[i]) == tmp -> t.end()){
@@ -37,7 +36,6 @@ bool Trie::find(string s){
 }
 
 bool Trie::sfind(string s){
-    cout << "Find " << s << ": ";
     Trie* tmp = this;
     for(int i = 0 ; i < s.size() ; i++){
         if(tmp -> t.find(s[i]) == tmp -> t.end()){

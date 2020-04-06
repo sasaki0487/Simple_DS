@@ -10,9 +10,9 @@ class Trie{
 public:
     Trie();
     Trie(char c);
-    void insert(string);
-    bool find(string);
-    bool sfind(string);
+    void insert(string); //Insert string into trie;
+    bool find(string); //Check if target string is in trie
+    bool sfind(string); //Check if target string is in trie and is same as the inserted string.
     bool is_end();
 };
 #endif
